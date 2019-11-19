@@ -6,24 +6,22 @@ $(document).ready(function () {
             name: $("#name").val().trim(),
             photo: $("#picture").val().trim(),
             scores: [
-                $("#q1").val().trim(),
-                $("#q2").val().trim(),
-                $("#q3").val().trim(),
-                $("#q4").val().trim(),
-                $("#q5").val().trim(),
-                $("#q6").val().trim(),
-                $("#q7").val().trim(),
-                $("#q8").val().trim(),
-                $("#q9").val().trim(),
-                $("#q10").val().trim()
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
             ]
         };
-
+    
         $
             .post("/api/friends", newUserInput)
             .then(function (data) {
-                console.log(data.name);
-                console.log(data.photo);
                 $("#friendName").text(data.name);
                 $("#photo").attr("src", data.photo);
                 $("#myModal").modal({

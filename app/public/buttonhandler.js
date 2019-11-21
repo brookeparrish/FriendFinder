@@ -27,6 +27,8 @@ $(document).ready(function () {
                 $("#myModal").modal({
                     show: true
                 });
+                $("#questions select").val("0");
+                $("#questions input[type='text']").val("");
             });
     });
 });
